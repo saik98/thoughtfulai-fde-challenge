@@ -1,27 +1,38 @@
-# thoughtfulai-fde-challenge
-Python solution for Thoughtful AI's FDE technical screen, package classification logic based on size and weight.
-# Thoughtful AI - Package Sorting Challenge
+# ThoughtfulAI Package Sorting Challenge
 
-## Overview
-This is a Python challenge I completed for Thoughtful AI. The goal was to create a function that sorts packages in a robotic factory based on their size and weight.
+## Problem Statement
 
-## The Problem
-A package is:
+Imagine you work in Thoughtful’s robotic automation factory. Your task is to write a function that directs packages into one of three stacks — **STANDARD**, **SPECIAL**, or **REJECTED** — based on their volume and mass.
 
-- **Bulky** if its volume is 1,000,000 cm³ or more, or if any dimension is 150 cm or larger.
-- **Heavy** if its mass is 20 kg or more.
+### Rules
 
-The sorting rules are:
-- `"STANDARD"` if the package is neither bulky nor heavy.
-- `"SPECIAL"` if the package is bulky or heavy (but not both).
-- `"REJECTED"` if the package is both bulky and heavy.
+- A package is **bulky** if its volume (width × height × length) is **at least 1,000,000 cm³** or if any single dimension is **150 cm or more**.
+- A package is **heavy** if its mass is **20 kg or more**.
+- Packages that are **both bulky and heavy** are **REJECTED**.
+- Packages that are **either bulky or heavy (but not both)** are **SPECIAL**.
+- Packages that are **neither bulky nor heavy** are **STANDARD**.
 
-## My Solution
+The function `sort(width, height, length, mass)` returns the correct stack name as a string.
 
-I implemented a function `sort(width, height, length, mass)` that returns the correct category as a string. The code avoids ternary operators (per the instructions) and includes test cases covering various scenarios, including edge cases.
+## Solution Overview
 
-## How to Run
+This repository contains a Python implementation of the sorting function along with test cases that cover normal and edge scenarios to ensure correctness.
 
-Run the script with:
-```bash
-python main.py
+## Getting Started
+
+### Prerequisites
+
+- Python 3.10 or higher
+
+### Running the Code
+
+1. Clone the repository:
+
+   ```bash
+   git clone
+   cd thoughtfulai-fde-challenge
+2. Run the tests:
+    python main.py
+
+Testing
+The main.py file includes a run_tests() function with predefined test cases. You can extend this to add more tests if needed.
